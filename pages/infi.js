@@ -17,11 +17,6 @@ const Infi = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
     getData();
   }, [lastId]);
 
@@ -29,9 +24,6 @@ const Infi = () => {
     setLastId(tempID);
   };
 
-  const handleResize = () => {
-    setDataReq(dataReq);
-  };
 
   console.log(dataReq);
   console.log(lastId);
