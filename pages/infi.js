@@ -16,10 +16,10 @@ const Infi = () => {
     setTempID(newRes[limit - 1].id);
   };
 
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     getData();
@@ -29,9 +29,9 @@ const Infi = () => {
     setLastId(tempID);
   };
 
-  // const handleResize = () => {
-  //   setItems(dataReq);
-  // };
+  const handleResize = () => {
+    setItems(dataReq);
+  };
 
   console.log(dataReq);
   console.log(lastId);
@@ -45,7 +45,7 @@ const Infi = () => {
         <form>
           <Flex>
             <Input type={"text"} name="cari_item" placeholder="search" />
-            <Button type="submit" mx={"10px"} colorScheme="cyan">
+            <Button type="submit" mx={"10px"} colorScheme="red">
               Cari
             </Button>
           </Flex>
