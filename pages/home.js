@@ -2,7 +2,7 @@ import { Box, Button, Center, Flex, Image, Input, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const home = ({ res, resAllData }) => {
+const Home = ({ res, resAllData }) => {
   const [inc, setInc] = useState(10);
   const [dataFoto, setDataFoto] = useState(res);
   const [dataFotoAll, setDataFotoAll] = useState(resAllData);
@@ -80,7 +80,7 @@ const home = ({ res, resAllData }) => {
   );
 };
 
-export default home;
+export default Home;
 
 export async function getServerSideProps() {
   const req = await fetch("https://jsonplaceholder.typicode.com/photos?_start=0&_limit=10");
