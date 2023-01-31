@@ -30,7 +30,7 @@ const Infi = () => {
   };
 
   const handleResize = () => {
-    setItems(dataReq);
+    setDataReq(dataReq);
   };
 
   console.log(dataReq);
@@ -45,7 +45,7 @@ const Infi = () => {
         <form>
           <Flex>
             <Input type={"text"} name="cari_item" placeholder="search" />
-            <Button type="submit" mx={"10px"} colorScheme="red">
+            <Button type="submit" mx={"10px"} colorScheme="whatsapp">
               Cari
             </Button>
           </Flex>
