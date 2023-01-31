@@ -16,6 +16,11 @@ const Infi = () => {
     setTempID(newRes[limit - 1].id);
   };
 
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+
   useEffect(() => {
     getData();
   }, [lastId]);
@@ -23,6 +28,10 @@ const Infi = () => {
   const fetchMore = () => {
     setLastId(tempID);
   };
+
+  // const handleResize = () => {
+  //   setItems(dataReq);
+  // };
 
   console.log(dataReq);
   console.log(lastId);
